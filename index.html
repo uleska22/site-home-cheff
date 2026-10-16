@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HomeCheff</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Cabeçalho Roxo -->
+    <header class="topo" id="inicio">
+        <div class="logo-topo">
+            
+           
+        </div>
+        <h1>HOMECHEFF</h1>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção de Apresentação / Hero -->
+        <section class="apresentacao">
+            <div class="texto-apresentacao">
+                <h2>Transformando ingredientes em inspiração culinária</h2>
+                <p>Seu assistente inteligente para criar as melhores receitas saudáveis.</p>
+                <a class="botao-principal" href="#chatbot">🍴 Experimente agora</a>
+            </div>
+            <div class="imagem-container">
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=85" alt="Cozinha HomeChef">
+            </div>
+        </section>
+
+        <!-- Seção de Benefícios -->
+        <section id="beneficios" class="beneficios">
+            <h2>Benefícios</h2>
+            <div class="cartoes">
+                <article>
+                    <h3>Receitas Personalizadas</h3>
+                    <p>De acordo com seu tempo, dieta e preferências.</p>
+                </article>
+                <article>
+                    <h3>Substituições Inteligentes</h3>
+                    <p>Alternativas saudáveis e econômicas para sua despensa.</p>
+                </article>
+                <article>
+                    <h3>Dicas de Cozinha</h3>
+                    <p>Melhore suas habilidades culinárias com truques simples.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção do Chatbot Interativo (IA / Escolha de Ingredientes, Nome e Tempo) -->
+        <section id="chatbot" class="chat-secao">
+            <div class="chat-container">
+                <div class="chat-topo">
+                    <div class="logo-chat">
+                        <span>🍲</span>
+                        <small>HOMECHEFF</small>
+                    </div>
+                    <h2>Bem-vindo ao Home Cheff!</h2>
+                </div>
+
+                <!-- Área onde as mensagens e botões de escolha aparecem dinamicamente -->
+                <div id="mensagens" class="mensagens">
+                    <div class="mensagem bot">
+                        Como você quer buscar sua receita hoje? 👩‍🍳
+                    </div>
+                    <div class="opcoes" id="opcoes-iniciais">
+                        <button onclick="escolherModo('nome')">Por Nome 🔎</button>
+                        <button onclick="escolherModo('ingredientes')">Por Ingredientes 🥕 🥔 🧀</button>
+                        <button onclick="escolherModo('tempo')">Por Tempo ⏱</button>
+                    </div>
+                </div>
+
+                <!-- Formulário de Entrada do Chat -->
+                <form id="formulario-chat">
+                    <input id="entrada-chat" type="text" placeholder="Digite sua escolha ou ingredientes..." autocomplete="off">
+                    <button type="submit">➤</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="sobre">
+            <h2>Sobre o HomeCheff</h2>
+            <p>Um projeto dedicado a otimizar sua rotina na cozinha, transformando o que você tem em geladeira em pratos deliciosos através de inteligência artificial.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
